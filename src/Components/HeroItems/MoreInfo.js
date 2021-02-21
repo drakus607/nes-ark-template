@@ -26,7 +26,11 @@ flex-direction: column;
 
 const MoreInfo = () => {
     return (
-        <MoreInfoDiv >
+        <MoreInfoDiv data-aos="fade-right"
+        data-aos-offset="500"
+        data-aos-easing="ease-in-sine"
+        data-aos-duration="600"
+        className="aos-init">
             <h1>Witaj na serwerze<br></br> <span>Never Ending Survival ARK</span></h1>
             <InfoBox />
         </MoreInfoDiv> 

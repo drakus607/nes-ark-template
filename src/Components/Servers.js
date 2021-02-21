@@ -6,20 +6,23 @@ import TitleDiv from './ServersDivs/TitleDiv'
 const ServersSection = styled.section`
 padding: 60px 0;
 overflow: hidden;
-font-family: "Open Sans", sans-serif;
+font-family: "Poppins", sans-serif;
 color: #444444;
 line-height: 1.5;
-background: linear-gradient(
-    rgba(0, 100, 100, 0.1111), 
-    rgba(0, 0, 0, 0.1));
-& #s1 {
-    padding: 10px;
-    text-align: center;
-    border-radius: 25px; 
-& div {
-    margin-right: auto;
-    margin-left: auto;
-    
+background: #f6f9fe;
+& #s2:hover {    
+    box-shadow: 0px 0 25px 0 rgb(16 110 234 / 10%);
+    border-color: #fff;
+    & h2 {
+        color: #106eea;
+    }
+}
+& #s1:hover {    
+    box-shadow: 0px 0 25px 0 rgb(16 110 234 / 10%);
+    border-color: #fff;
+    & h2 {
+        color: #106eea;
+    }
 }
 `
 
@@ -28,7 +31,7 @@ const Servers = () => {
     return (
         <ServersSection id="servers">
             <div>
-            <TitleDiv/>
+            <TitleDiv title="Dostępne Serwery" subtitle="Poniżej znajdziesz serwery oraz ich statusy"/>
             <ServerStatDiv/>
             </div>
         </ServersSection>

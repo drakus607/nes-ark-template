@@ -20,14 +20,19 @@ const StyledTitle = styled.div`
     display: inline-block;
     border-radius: 50px;
 }
+& h3 {
+    font-family: "Poppins",sans-serif;
+    color: #444444;
+    line-height: 1.5;
+}
 `
 
 
-const TitleDiv = () => {
+const TitleDiv = (props) => {
     return (
         <StyledTitle>
-            <h2>Dostępne Serwery</h2>
-            <h3>Poniżej znajdziesz serwery oraz ich statusy</h3>
+            <h2>{props.title}</h2>
+            <h3>{props.subtitle}</h3>
         </StyledTitle>
     )
 }

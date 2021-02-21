@@ -5,7 +5,8 @@ const StyledInfoBox = styled.div`
 display: flex;
 flex-direction: column;
     margin-left: 3rem;
-    margin-top: 0; 
+    margin-top: 0;
+    margin-right: 3rem; 
     padding: 1rem;
     font-size: 2rem;
     color: red;
@@ -18,6 +19,7 @@ flex-direction: column;
     font-family: "Poppins", sans-serif;
 }
 & p {
+    padding: 0 15px;
     text-shadow: none;
     font-size: 1rem;
     color: black;

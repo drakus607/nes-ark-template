@@ -13,6 +13,7 @@ padding: 0 5% 0 0;
 position: fixed;
 width: 100%;
 background: white;
+z-index: 997;
 `
 
 

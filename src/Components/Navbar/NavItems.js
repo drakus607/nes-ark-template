@@ -13,7 +13,7 @@ margin-right: 0.5rem;
 
 & li {
     list-style-type: none;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     text-decoration: none;
     color: #222222;
     cursor: pointer;
@@ -37,10 +37,12 @@ const NavItems = () => {
     return (
         <StyledNavItems>
         <ul id="links">
-          <li>Strona Główna</li>
+          <li>Home</li>
           <li>Serwery</li>
-          <li>Services</li>
+          <li>Zasady</li>
           <li>Contact</li>
+          <li>Donate</li>
+          <li>Discord</li>
         </ul>
         </StyledNavItems>
     )
