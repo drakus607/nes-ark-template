@@ -14,14 +14,16 @@ padding: 0 15px;
 }
 `
 
-const connectServerHandler = (ip, port) => {
-    //href=`steam://rungameid/346110//connect//${ip}:${port}`
-    // onClick -> podstaw IP:PORT i wykonaj hrefa steam://rungameid/346110//connect//IP_SERWERA:PORT
-}
+
 
 const ConnectButton = (props) => {
+    const connectServerHandler = (url) => {
+        window.location.href = url;
+        //href=`steam://rungameid/346110//connect//51.38.145.171:7777`  ${ip}:${port}
+        // onClick -> podstaw IP:PORT i wykonaj hrefa steam://rungameid/346110//connect//IP_SERWERA:PORT
+    }
     return (
-        <StyledButton id={props.btnId} href="google.pl"> {props.text} </StyledButton>
+        <StyledButton id={props.btnId} onClick={() => {connectServerHandler(props.url)}}> {props.text} </StyledButton>
     )
 }
 

@@ -37,9 +37,10 @@ const listItems = rules.map((rule) => <li key={rule.id}>
 
 const RulesSection = () => {
     return (
-        <StyledRules>
+        <StyledRules id="rules">
             <TitleDiv title="Zasady" subtitle="Poniżej znajdziesz zasady panujące na serwerach" />
-      <div>
+      <div data-aos="zoom-in-down" data-aos-easing="linear"
+        data-aos-duration="600">
       {listItems}
       </div>
         </StyledRules>

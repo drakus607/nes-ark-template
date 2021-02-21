@@ -19,7 +19,6 @@ const RatesDiv = () => {
             <h3>Egg Hatch: <span>XX</span></h3>
             <h3>Maturation: <span>XX</span></h3>
             <h3>Max lvl dino: <span>XX</span></h3>
-            <h3>PVP/NON PVP</h3>
         </StyledRates>
     )
 }

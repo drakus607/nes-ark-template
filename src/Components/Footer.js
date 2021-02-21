@@ -15,7 +15,8 @@ background: #fff;
 
 const Footer = () => {
     return (
-        <StyledFooter>
+        <StyledFooter id="footer" data-aos="zoom-out" data-aos-easing="linear"
+        data-aos-duration="600">
             <TitleDiv title="Discord" subtitle="Jeśli masz do nas pytania skieruj je na discord lub przez formularz poniżej."/>
             <div id="Contacts">
             <DiscordFrame/>

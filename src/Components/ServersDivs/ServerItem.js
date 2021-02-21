@@ -50,7 +50,7 @@ const ServerItem = (props) => {
             <h2>{props.title}</h2>
             <h3 className={props.badge}>{props.pvp}</h3>
             <RatesDiv/>
-            <ConnectButton btnId="btn_1" text="Connect Now" ip={props.ip} />          
+            <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />          
         </StyledItem>
         
     )

@@ -12,8 +12,14 @@ justify-content: center;
 const ServerStatDiv = () => {
     return (
         <StyledServers>
-            <ServerItem id="s1" title="Never Ending Survival Core" ip="url" pvp="PVP" badge="badge"/>
-            <ServerItem id="s2" title="Never Ending Survival Sub" ip="url2" pvp="NON-PVP" badge="badge nonpvp" />
+            <ServerItem id="s1"
+            title="Never Ending Survival Core"
+            url="steam://rungameid/346110//connect//51.38.145.171:7777"
+            pvp="PVP" badge="badge"/>
+            <ServerItem id="s2"
+            title="Never Ending Survival Sub"
+            url="https://google.pl/"
+            pvp="NON-PVP" badge="badge nonpvp" />
         </StyledServers>
     )
 }

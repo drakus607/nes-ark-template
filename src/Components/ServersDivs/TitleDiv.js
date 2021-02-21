@@ -30,7 +30,8 @@ const StyledTitle = styled.div`
 
 const TitleDiv = (props) => {
     return (
-        <StyledTitle>
+        <StyledTitle data-aos="zoom-in-down" data-aos-easing="linear"
+        data-aos-duration="600">
             <h2>{props.title}</h2>
             <h3>{props.subtitle}</h3>
         </StyledTitle>

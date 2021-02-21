@@ -37,12 +37,11 @@ const NavItems = () => {
     return (
         <StyledNavItems>
         <ul id="links">
-          <li>Home</li>
-          <li>Serwery</li>
-          <li>Zasady</li>
-          <li>Contact</li>
-          <li>Donate</li>
-          <li>Discord</li>
+          <li><a href="./#home">Home</a></li>
+          <li><a href="./#servers">Serwery</a></li>
+          <li><a href="./#rules">Zasady</a></li>
+          <li><a href="./#donate">Donate</a></li>
+          <li><a href="./#footer">Discord</a></li>
         </ul>
         </StyledNavItems>
     )

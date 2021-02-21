@@ -6,7 +6,7 @@ const StyledDonate = styled.section`
 
 const DonateSection = () => {
     return (
-        <StyledDonate>
+        <StyledDonate id="donate">
             
         </StyledDonate>
     )
