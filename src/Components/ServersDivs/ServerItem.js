@@ -4,6 +4,7 @@ import ConnectButton from './ConnectButton'
 import RatesDiv from './RatesDiv'
 
 const StyledItem = styled.div`
+margin-top: 2rem;
 margin-left: 1rem;
 margin-right: 1rem;
 padding: 1rem;
@@ -39,6 +40,9 @@ overflow: hidden;
 }
 & .nonpvp {
     background: green;
+}
+@media(min-width: 760px){
+    margin-top: 0;
 }
 `
 

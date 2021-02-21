@@ -4,8 +4,11 @@ import ServerItem from './ServerItem'
 
 const StyledServers = styled.div`
 display: flex;
-margin: 1rem 5rem;
-justify-content: center;
+flex-direction: column;
+@media(min-width: 760px){
+    flex-direction: row;
+    justify-content: center;
+    margin: 1rem 5rem;
 }
 `
 

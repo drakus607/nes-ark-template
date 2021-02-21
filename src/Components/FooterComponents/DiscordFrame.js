@@ -12,7 +12,7 @@ const DiscordFrame = () => {
     return (
         <StyledDiscordFrame
             src="https://discord.com/widget?id=813071398452330567&theme=dark"
-             width="700" height="400"
+             width="75%" height="400px"
               allowtransparency="true"
                frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
         </StyledDiscordFrame>

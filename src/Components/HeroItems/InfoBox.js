@@ -4,26 +4,42 @@ import styled from 'styled-components'
 const StyledInfoBox = styled.div`
 display: flex;
 flex-direction: column;
-    margin-left: 3rem;
+    margin-left: 1rem;
     margin-top: 0;
     margin-right: 3rem; 
     padding: 1rem;
     font-size: 2rem;
-    color: red;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.2);
+    font-family: "Poppins", sans-serif;
 }
 & h2 {
     margin: 0;
-    font-size: 2rem;
-    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    color: red;
 }
 & p {
     padding: 0 15px;
-    text-shadow: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: black;
-    font-family: "Poppins", sans-serif;
+}
+@media(min-width:400px){
+    h2{
+        font-size: 1.2rem;
+    }
+    & p {
+        font-size: 0.95rem;
+    }
+}
+
+@media(min-width: 515px){
+    margin-left: 3rem;
+    & h2 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1rem;
+    }
 }
 `
 

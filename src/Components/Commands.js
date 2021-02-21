@@ -25,7 +25,7 @@ const commands =[{ id:1,command: "/reset", desc:"cos resetuje"},
 {id:4,command: "/costam", desc:"costamcośtamuje"},
 {id:5,command: "/template", desc:"testowe"}];
 
-const commandItem = commands.map((item) => <li key={commands.id}>
+const commandItem = commands.map((item) => <li key={item.id}>
     <h4><span>{item.command}</span> - <span>{item.desc}</span> </h4>  </li>);
 
 const Commands = () => {

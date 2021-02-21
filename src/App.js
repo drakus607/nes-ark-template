@@ -9,15 +9,17 @@ import Commands from './Components/Commands';
 
 function App() {
   return (
-    <main>
-      {AOS.init()}
+    <>
+      {AOS.init({
+        once: true
+      })}
      <Header />
      <Hero />
      <Servers />
      <Commands/>
      <RulesSection/>
      <Footer/>
-    </main>
+     </>
   );
 }
 
