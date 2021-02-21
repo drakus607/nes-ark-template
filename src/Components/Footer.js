@@ -6,11 +6,7 @@ import TitleDiv from './ServersDivs/TitleDiv'
 const StyledFooter = styled.section`
 display: flex;
 flex-direction: column;
-background: #fff;
-#Contacts {
-    display: flex;
-    justify-content: center;
-}
+background: #fff
 `
 
 const Footer = () => {
@@ -18,9 +14,7 @@ const Footer = () => {
         <StyledFooter id="footer" data-aos="zoom-out" data-aos-easing="linear"
         data-aos-duration="600">
             <TitleDiv title="Discord" subtitle="Jeśli masz do nas pytania skieruj je na discord lub przez formularz poniżej."/>
-            <div id="Contacts">
             <DiscordFrame/>
-            </div>
         </StyledFooter>
         
     )

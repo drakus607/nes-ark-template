@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const StyledDiscordFrame = styled.iframe`
 outline: none;
 border: 0;
+margin: auto;
 `
 
 

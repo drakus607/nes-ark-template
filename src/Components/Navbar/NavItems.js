@@ -40,6 +40,7 @@ const NavItems = () => {
           <li><a href="./#home">Home</a></li>
           <li><a href="./#servers">Serwery</a></li>
           <li><a href="./#rules">Zasady</a></li>
+          <li><a href="./#commands">Komendy</a></li>
           <li><a href="./#donate">Donate</a></li>
           <li><a href="./#footer">Discord</a></li>
         </ul>
