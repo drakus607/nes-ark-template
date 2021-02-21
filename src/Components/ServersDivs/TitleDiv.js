@@ -38,8 +38,7 @@ h2 {
 
 const TitleDiv = (props) => {
     return (
-        <StyledTitle data-aos="zoom-in-down" data-aos-easing="linear"
-        data-aos-duration="600">
+        <StyledTitle>
             <h2>{props.title}</h2>
             <h3>{props.subtitle}</h3>
         </StyledTitle>

@@ -48,7 +48,7 @@ overflow: hidden;
 
 const ServerItem = (props) => {
     return (
-        <StyledItem id={props.id} data-aos="fade-down"
+        <StyledItem data-aos-anchor="#home" id={props.id} data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="600">            
             <h2>{props.title}</h2>
