@@ -6,17 +6,13 @@ const StyledServers = styled.div`
 display: flex;
 height: 60vh;
 margin: 1rem 5rem;
-justify-self: center;
-align-self: center;
+justify-content: center;
 `
-
 
 const ServerStatDiv = () => {
     return (
         <StyledServers>
-            <ServerItem/>
-            <ServerItem/>
-            <ServerItem/>
+            <ServerItem id="s1"/>
         </StyledServers>
     )
 }

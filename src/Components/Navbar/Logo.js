@@ -21,7 +21,7 @@ font-family: "Poppins", sans-serif;
 const Logo = () => {
     return (
         <LogoDiv>
-            <StyledLogo>Never Ending Survival<span>.</span></StyledLogo>
+            <StyledLogo><span>N</span>ever <span>E</span>nding <span>S</span>urvival</StyledLogo>
         </LogoDiv>
 
     )

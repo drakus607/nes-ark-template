@@ -3,14 +3,16 @@ import styled from 'styled-components';
 import Logo from './Navbar/Logo'
 import NavItems from './Navbar/NavItems';
 
-//Style to header
 const NavContainer = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-height: 5rem;
+height: 4.5rem;
 padding: 0 5% 0 0;
+position: fixed;
+width: 100%;
+background: white;
 `
 
 
@@ -19,8 +21,6 @@ const Header = () => {
         <NavContainer>
             <Logo/>
             <NavItems/>
-            {//miejsce na 2 divy
-}
         </NavContainer>
     )
 }
