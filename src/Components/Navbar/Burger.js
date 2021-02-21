@@ -40,9 +40,26 @@ position: absolute;
 }
 `
 
+
+export const OpenMobileHandler = () => {
+  const menu = document.getElementById('mobile_menu');
+  const backdrop = document.querySelector('.backdrop');
+  menu.classList.toggle('hidden');
+  menu.classList.toggle('visible');
+  backdrop.classList.toggle('open');
+}
+export const CloseMobileHandler = () => {
+  const menu = document.getElementById('mobile_menu');
+  const backdrop = document.querySelector('.backdrop');
+  menu.classList.remove('visible');
+  menu.classList.add('hidden');
+  backdrop.classList.remove('open');
+
+}
+
 const Burger = () => {
     return (
-        <StyledBurger id="mobile_nav">
+        <StyledBurger id="mobile_nav" onClick={OpenMobileHandler}>
             <div />
             <div />
             <div />

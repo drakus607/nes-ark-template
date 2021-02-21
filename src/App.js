@@ -6,6 +6,8 @@ import AOS from 'aos';
 import RulesSection from './Components/RulesSection';
 import Footer from './Components/Footer';
 import Commands from './Components/Commands';
+import MobileMenu from './Components/Navbar/MobileMenu';
+import Backdrop from './Components/Backdrop';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         once: true
       })}
      <Header />
+     <Backdrop/>
+     <MobileMenu/>
      <Hero />
      <Servers />
      <Commands/>

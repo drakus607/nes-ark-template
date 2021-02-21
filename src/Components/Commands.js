@@ -5,7 +5,6 @@ import TitleDiv from './ServersDivs/TitleDiv';
 const StyledCommands = styled.section`
 overflow: hidden;
 padding: 60px 0;
-font-family: "Poppins", sans-serif;
 color: #444444;
 line-height: 1.5;
 background: #fff;
@@ -13,6 +12,7 @@ text-align: center;
 & li {
     list-style: none;
     font-size: 1.4rem;
+    padding: 0 1rem;
     & span:first-of-type {
         color: red;
     }

@@ -10,8 +10,9 @@ color: #444444;
 line-height: 1.5;
 background: #fff;
 & li {
+    padding: 0 1rem;
     list-style: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     & span:last-of-type {
         text-decoration: underline;
     }
@@ -20,9 +21,14 @@ background: #fff;
     }
 }
 & div {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     background: #fff;
+}
+@media(min-width: 680px){
+    li {
+        font-size: 1rem;
+    }
 }
 `
 const rules =[{ id:1,title: "No cheating", subtitle:"This includes hacks, map glitches or bots (macros are okay)."},
