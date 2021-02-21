@@ -7,14 +7,14 @@ background:  linear-gradient(
     rgba(255, 255, 255, 0.6), 
     rgba(255, 255, 255, 0.6)
   ), url('./images/bgimage.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 `
 const StyledHero = styled.section`
 display: flex;
-height: 75vh;
+min-height: 65vh;
 `
 
 const Hero = () => {

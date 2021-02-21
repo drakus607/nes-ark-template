@@ -4,7 +4,7 @@ import Logo from './Navbar/Logo'
 import NavItems from './Navbar/NavItems';
 import Burger from './Navbar/Burger'
 
-const NavContainer = styled.div`
+const NavContainer = styled.header`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -15,6 +15,7 @@ position: fixed;
 width: 100%;
 background: white;
 z-index: 997;
+box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
 @media(min-width: 520px){
     align-items: flex-start;
 }

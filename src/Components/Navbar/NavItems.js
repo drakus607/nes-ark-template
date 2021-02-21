@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledNavItems = styled.div`
 #links {
-    margin-right: 2rem;
+    margin-right: 1rem;
     display: none;
     padding: 0;
 }

@@ -21,7 +21,7 @@ background: #fff;
     }
 }
 & div {
-    margin-left: 2rem;
+    margin-left: 3rem;
     margin-right: 2rem;
     background: #fff;
 }
@@ -45,8 +45,7 @@ const RulesSection = () => {
     return (
         <StyledRules id="rules">
             <TitleDiv title="Zasady" subtitle="Poniżej znajdziesz zasady panujące na serwerach" />
-      <div data-aos="zoom-in-down" data-aos-easing="linear"
-        data-aos-duration="600">
+      <div>
       {listItems}
       </div>
         </StyledRules>
