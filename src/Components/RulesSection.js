@@ -8,7 +8,8 @@ padding: 60px 0;
 font-family: "Poppins", sans-serif;
 color: #444444;
 line-height: 1.5;
-background: #fff;
+background: #f6f9fe;
+margin-bottom: 2rem;
 & li {
     padding: 0 1rem;
     list-style: none;
@@ -23,7 +24,6 @@ background: #fff;
 & div {
     margin-left: 3rem;
     margin-right: 2rem;
-    background: #fff;
 }
 @media(min-width: 680px){
     li {

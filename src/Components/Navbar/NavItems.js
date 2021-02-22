@@ -46,11 +46,11 @@ const NavItems = () => {
         <StyledNavItems>
         <ul id="links">
           <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
-          <li><Link to="servers" smooth={true} duration={500}>Serwery</Link></li>
-          <li><Link to="commands" smooth={true} duration={500}>Komendy</Link></li>
-          <li><Link to="rules" smooth={true} duration={500}>Zasady</Link></li>
-          <li><Link to="donate" smooth={true} duration={500}>Donate</Link></li>
-          <li><Link to="footer" smooth={true} duration={500}>Discord</Link></li>
+          <li><Link to="servers" smooth={true} duration={500} offset={-25}>Serwery</Link></li>
+          <li><Link to="commands" smooth={true} duration={500} offset={-25}>Komendy</Link></li>
+          <li><Link to="rules" smooth={true} duration={500} offset={-25}>Zasady</Link></li>
+          <li><Link to="donate" smooth={true} duration={500} offset={-25}>Donate</Link></li>
+          <li><Link to="footer" smooth={true} duration={500} offset={-25}>Discord</Link></li>
         </ul>
         </StyledNavItems>
     )

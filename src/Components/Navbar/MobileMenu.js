@@ -28,6 +28,7 @@ const StyledMobileMenu = styled.div`
     text-align: center;
     margin-bottom: 0;
     margin-top: 0.5rem;
+    padding: 0;
 }
 & li {
     display: block;
@@ -65,12 +66,12 @@ const MobileMenu = () => {
     return (
         <StyledMobileMenu id="mobile_menu" className="mobile hidden">
         <ul className="mobile_navlinks">
-          <li><Link onClick={CloseMobileHandler} to="home" smooth={true} duration={500}>Home</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="servers" smooth={true} duration={500}>Serwery</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="commands" smooth={true} duration={500}>Komendy</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="rules" smooth={true} duration={500}>Zasady</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="donate" smooth={true} duration={500}>Donate</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="footer" smooth={true} duration={500}>Discord</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="home" smooth={true} duration={500} >Home</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="servers" smooth={true} duration={500} offset={-25}>Serwery</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="commands" smooth={true} duration={500} offset={-25}>Komendy</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="rules" smooth={true} duration={500} offset={-25}>Zasady</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="donate" smooth={true} duration={500} offset={-25}>Donate</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="footer" smooth={true} duration={500} offset={-25}>Discord</Link></li>
         </ul>
         <div id="close_mobile" onClick={CloseMobileHandler}><IoClose /></div>
         </StyledMobileMenu>
