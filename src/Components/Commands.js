@@ -30,7 +30,7 @@ const commandItem = commands.map((item) => <li key={item.id}>
 
 const Commands = () => {
     return (
-        <StyledCommands id="commands">
+        <StyledCommands id="commands" name="commands">
             <TitleDiv title="Komendy" subtitle="Poniżej znajdziesz listę dostępnych komend na serwerze"/>
             {commandItem}
         </StyledCommands>

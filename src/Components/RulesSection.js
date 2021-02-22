@@ -43,7 +43,7 @@ const listItems = rules.map((rule) => <li key={rule.id}>
 
 const RulesSection = () => {
     return (
-        <StyledRules id="rules">
+        <StyledRules id="rules" name="rules">
             <TitleDiv title="Zasady" subtitle="Poniżej znajdziesz zasady panujące na serwerach" />
       <div>
       {listItems}

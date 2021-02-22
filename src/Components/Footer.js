@@ -26,7 +26,7 @@ width: 100%;
 
 const Footer = () => {
     return (
-        <StyledFooter id="footer">
+        <StyledFooter id="footer" name="footer">
             <TitleDiv title="Discord" subtitle="Jeśli masz do nas pytania skieruj je na discord lub przez formularz poniżej."/>
             <DiscordFrame/>
             <p>Projekt i wykonanie: <span>  NES-ARK Team</span></p>

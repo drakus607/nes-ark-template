@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {CloseMobileHandler} from './Burger'
 import {IoClose} from 'react-icons/io5'
+import {Link} from 'react-scroll'
 
 const StyledMobileMenu = styled.div`
 &.mobile {
@@ -32,12 +33,13 @@ const StyledMobileMenu = styled.div`
     display: block;
     margin: 1rem;
 }
-& a {
+& li a {
     color: #444444;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
     font-size: 1rem;
     font-weight: 700;
+    cursor: pointer;
 }
 & #close_mobile svg{
     width: 3rem;
@@ -63,12 +65,12 @@ const MobileMenu = () => {
     return (
         <StyledMobileMenu id="mobile_menu" className="mobile hidden">
         <ul className="mobile_navlinks">
-          <li><a onClick={CloseMobileHandler} href="./#home">Home</a></li>
-          <li><a onClick={CloseMobileHandler} href="./#servers">Serwery</a></li>
-          <li><a onClick={CloseMobileHandler} href="./#rules">Zasady</a></li>
-          <li><a onClick={CloseMobileHandler} href="./#commands">Komendy</a></li>
-          <li><a onClick={CloseMobileHandler} href="./#donate">Donate</a></li>
-          <li><a onClick={CloseMobileHandler} href="./#footer">Discord</a></li>
+          <li><Link onClick={CloseMobileHandler} to="home" smooth={true} duration={500}>Home</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="servers" smooth={true} duration={500}>Serwery</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="commands" smooth={true} duration={500}>Komendy</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="rules" smooth={true} duration={500}>Zasady</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="donate" smooth={true} duration={500}>Donate</Link></li>
+          <li><Link onClick={CloseMobileHandler} to="footer" smooth={true} duration={500}>Discord</Link></li>
         </ul>
         <div id="close_mobile" onClick={CloseMobileHandler}><IoClose /></div>
         </StyledMobileMenu>

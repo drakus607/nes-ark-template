@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {Link} from 'react-scroll'
 
 const StyledNavItems = styled.div`
 #links {
@@ -44,12 +45,12 @@ const NavItems = () => {
     return (
         <StyledNavItems>
         <ul id="links">
-          <li><a href="./#home">Home</a></li>
-          <li><a href="./#servers">Serwery</a></li>
-          <li><a href="./#rules">Zasady</a></li>
-          <li><a href="./#commands">Komendy</a></li>
-          <li><a href="./#donate">Donate</a></li>
-          <li><a href="./#footer">Discord</a></li>
+          <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
+          <li><Link to="servers" smooth={true} duration={500}>Serwery</Link></li>
+          <li><Link to="commands" smooth={true} duration={500}>Komendy</Link></li>
+          <li><Link to="rules" smooth={true} duration={500}>Zasady</Link></li>
+          <li><Link to="donate" smooth={true} duration={500}>Donate</Link></li>
+          <li><Link to="footer" smooth={true} duration={500}>Discord</Link></li>
         </ul>
         </StyledNavItems>
     )
