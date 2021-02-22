@@ -25,13 +25,11 @@ box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
     }
 }
 `
-
-
 const Header = () => {
     return (
         <NavContainer>
             <Logo/>
-            <NavItems/>
+            {(window.innerWidth >= 960) ? <NavItems/> : null}
             <Burger />
         </NavContainer>
     )

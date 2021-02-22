@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {CloseMobileHandler} from './Burger'
+import {IoClose} from 'react-icons/io5'
 
 const StyledMobileMenu = styled.div`
 &.mobile {
@@ -17,15 +18,18 @@ const StyledMobileMenu = styled.div`
     position: fixed;
     background: white;
     z-index: 999;
+    animation: SlideIn 0.5s forwards;
 }
 & ul{
     display: flex;
     flex-direction: column;
-    list-style-type: none;
-    margin: auto auto;    
+    list-style-type: none;    
     text-align: center;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
 }
 & li {
+    display: block;
     margin: 1rem;
 }
 & a {
@@ -35,6 +39,23 @@ const StyledMobileMenu = styled.div`
     font-size: 1rem;
     font-weight: 700;
 }
+& #close_mobile svg{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    cursor: pointer;
+}
+@keyframes SlideIn {
+    0% {
+      opacity: 0;
+      top: -100%;
+    }
+    100% {
+      opacity: 1;
+      top: 0%;
+    }
 `
 
 
@@ -49,6 +70,7 @@ const MobileMenu = () => {
           <li><a onClick={CloseMobileHandler} href="./#donate">Donate</a></li>
           <li><a onClick={CloseMobileHandler} href="./#footer">Discord</a></li>
         </ul>
+        <div id="close_mobile" onClick={CloseMobileHandler}><IoClose /></div>
         </StyledMobileMenu>
     )
 }

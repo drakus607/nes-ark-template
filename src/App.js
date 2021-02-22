@@ -8,16 +8,18 @@ import Footer from './Components/Footer';
 import Commands from './Components/Commands';
 import MobileMenu from './Components/Navbar/MobileMenu';
 import Backdrop from './Components/Backdrop';
+import useWindowSize from './Components/Vendors/useWindowSize'
 
 function App() {
+  const {width} = useWindowSize();
+  AOS.init({
+    once: true
+  });
   return (
     <>
-      {AOS.init({
-        once: true
-      })}
      <Header />
-     <Backdrop/>
-     <MobileMenu/>
+     {width <= 960 && <Backdrop/>}
+     {width <= 960 && <MobileMenu/>}
      <Hero />
      <Servers />
      <Commands/>
