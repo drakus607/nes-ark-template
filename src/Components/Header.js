@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Logo from './Navbar/Logo'
 import NavItems from './Navbar/NavItems';
 import Burger from './Navbar/Burger'
+import useWindowSize from './Vendors/useWindowSize'
 
 const NavContainer = styled.header`
 display: flex;
@@ -26,11 +27,12 @@ box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
 }
 `
 const Header = () => {
+    const {width} = useWindowSize();
     return (
         <NavContainer>
             <Logo/>
-            {(window.innerWidth >= 960) ? <NavItems/> : null}
-            <Burger />
+            {width >= 960 && <NavItems/>}
+            {width <= 960 && <Burger />}
         </NavContainer>
     )
 }
