@@ -1,5 +1,6 @@
-import React from 'react'
+import {React, useEffect} from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 const StyledRates = styled.div`
 & span {
@@ -7,13 +8,11 @@ const StyledRates = styled.div`
 }
 `
 
-
-
-const RatesDiv = () => {
+const RatesDiv = (props) => {    
     return (
         <StyledRates>
-            <h3>Ilość osób na serwerze: <span>XX / XX</span></h3>
-            <h3>Mnożnik XP: <span>*XX</span></h3>
+            <h3>Ilość osób na serwerze: <span>{props.players} / {props.max}</span></h3>
+            <h3>Mnożnik XP: <span>{props.ping}</span></h3>
             <h3>Taming Speed: <span>*XX</span></h3>
             <h3>Harvest: <span>XX</span></h3>
             <h3>Egg Hatch: <span>XX</span></h3>

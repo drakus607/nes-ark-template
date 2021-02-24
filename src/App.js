@@ -9,6 +9,7 @@ import Commands from './Components/Commands';
 import MobileMenu from './Components/Navbar/MobileMenu';
 import Backdrop from './Components/Backdrop';
 import useWindowSize from './Components/Vendors/useWindowSize'
+import TestDiv from './Components/TestDiv';
 
 function App() {
   const {width} = useWindowSize();
@@ -21,6 +22,7 @@ function App() {
      {width <= 960 && <Backdrop/>}
      {width <= 960 && <MobileMenu/>}
      <Hero />
+     <TestDiv/>
      <Servers />
      <Commands/>
      <RulesSection/>
