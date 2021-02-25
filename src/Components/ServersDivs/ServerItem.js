@@ -58,7 +58,6 @@ const ServerItem = (props) => {
     axios.get("http://localhost:3001/core").then((info) => {
       setPlayers(info.data.raw.numplayers);
       setMaxPlayers(info.data.maxplayers);
-    //   console.log(info);
       setPing(info.data.ping);
     });
   };
@@ -72,7 +71,7 @@ const ServerItem = (props) => {
       data-aos-duration="600"
     >
       <h2>{props.title}</h2>
-      <h3 className={props.badge}>{props.pvp}</h3>
+      <h3 className={props.badge}>{props.status}</h3>
       <RatesDiv players={playersNum} max={maxPlayers} ping={curPing} />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
