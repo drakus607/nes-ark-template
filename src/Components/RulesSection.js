@@ -72,8 +72,8 @@ const rules = [
 const listItems = rules.map((rule) => (
   <li key={rule.id}>
     <h4>
-      {rule.id}. <span>{rule.title}</span> : <span>{rule.subtitle}</span>{" "}
-    </h4>{" "}
+      {rule.id}. <span>{rule.title}</span> : <span>{rule.subtitle}</span>
+    </h4>
   </li>
 ));
 

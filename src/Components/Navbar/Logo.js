@@ -15,6 +15,7 @@ font-size: 1.2rem;
 margin-left: 2rem;
 line-height: 1;
 font-weight: 600;
+cursor: grab;
 letter-spacing: 0.8px;
 font-family: "Poppins", sans-serif;
 @media(min-width: 420px){

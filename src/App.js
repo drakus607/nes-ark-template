@@ -10,6 +10,7 @@ import MobileMenu from "./Components/Navbar/MobileMenu";
 import Backdrop from "./Components/Backdrop";
 import useWindowSize from "./Components/Vendors/useWindowSize";
 import TestDiv from "./Components/TestDiv";
+import NewsSection from "./Components/News/NewsSection";
 
 function App() {
   const { width } = useWindowSize();
@@ -22,7 +23,8 @@ function App() {
       {width <= 960 && <Backdrop />}
       {width <= 960 && <MobileMenu />}
       <Hero />
-      <TestDiv />
+      <NewsSection/>
+      {/* <TestDiv /> */}
       <Servers />
       <Commands />
       <RulesSection />
