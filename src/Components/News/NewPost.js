@@ -26,11 +26,11 @@ const NewPost = (props) => {
   moment.locale("pl");
   return (
     <StyledPost>
-      <div key={props.key}>
+      <div>
         <p>{props.title}</p>
         <p>{moment(props.time).format("LLL")}</p>
       </div>
-      <div id body>
+      <div>
         <p>{props.body}</p>
       </div>
     </StyledPost>

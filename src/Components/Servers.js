@@ -30,7 +30,7 @@ background: #f6f9fe;
 const Servers = () => {
     return (
         <ServersSection id="servers" name="servers">
-            <div>
+            <div className="container">
             <TitleDiv title="Dostępne Serwery" subtitle="Poniżej znajdziesz serwery oraz ich statusy"/>
             <ServerStatDiv/>
             </div>

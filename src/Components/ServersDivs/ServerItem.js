@@ -55,7 +55,7 @@ const ServerItem = (props) => {
   const [maxPlayers, setMaxPlayers] = useState();
   const [curPing, setPing] = useState();
   const getServerInfo = () => {
-    axios.get("http://localhost:3001/core").then((info) => {
+    axios.get("/core").then((info) => {
       setPlayers(info.data.raw.numplayers);
       setMaxPlayers(info.data.maxplayers);
       setPing(info.data.ping);

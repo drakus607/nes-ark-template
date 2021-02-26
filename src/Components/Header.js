@@ -29,7 +29,7 @@ box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
 const Header = () => {
     const {width} = useWindowSize();
     return (
-        <NavContainer>
+        <NavContainer >
             <Logo/>
             {width >= 960 && <NavItems/>}
             {width <= 960 && <Burger />}

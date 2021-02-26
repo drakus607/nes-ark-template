@@ -79,7 +79,7 @@ const listItems = rules.map((rule) => (
 
 const RulesSection = () => {
   return (
-    <StyledRules id="rules" name="rules">
+    <StyledRules className="container" id="rules" name="rules">
       <TitleDiv
         title="Zasady"
         subtitle="Poniżej znajdziesz zasady panujące na serwerach"
