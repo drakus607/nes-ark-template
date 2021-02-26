@@ -1,6 +1,7 @@
 import { React, Component } from "react";
 import axios from "axios";
 import NewPost from "./NewPost";
+import styles from './NewsSection.module.css'
 
 
 class NewsSection extends Component {
@@ -31,7 +32,7 @@ class NewsSection extends Component {
     }
 
   render() {
-    return <div className={`container styles.newsSection`}>{this.state.posts}</div>;
+    return <div className={'container ' + styles.newsSection}>{this.state.posts}</div>;
   }
 }
 
