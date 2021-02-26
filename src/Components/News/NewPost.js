@@ -1,13 +1,40 @@
-import React from 'react'
+import React from "react";
+import moment from "moment";
+import "moment/locale/pl";
+import styled from "styled-components";
+
+const StyledPost = styled.div`
+display: flex;
+flex-direction: column;
+  div:first-of-type {
+    display:flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 1rem;
+    background: #f6f9fe;
+
+  }
+  &div p{
+    font-size: 0.6rem;
+  }
+  & p:first-of-type {
+    text-align: left;
+  }
+`;
 
 const NewPost = (props) => {
-    return (
-        <div key={props.key}>
-            <h2>{props.header}</h2>
-            <p>{props.body}</p>
-            <p>{props.author}</p>            
-        </div>
-    )
-}
+  moment.locale("pl");
+  return (
+    <StyledPost>
+      <div key={props.key}>
+        <p>{props.title}</p>
+        <p>{moment(props.time).format("LLL")}</p>
+      </div>
+      <div id body>
+        <p>{props.body}</p>
+      </div>
+    </StyledPost>
+  );
+};
 
-export default NewPost
+export default NewPost;

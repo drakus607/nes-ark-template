@@ -20,9 +20,11 @@ min-height: 65vh;
 const Hero = () => {
     return (
         <BgDiv>
+        <div className="container">
         <StyledHero id="home" name="home">            
             <MoreInfo/>
         </StyledHero>
+        </div>
         </BgDiv>
     )
 }

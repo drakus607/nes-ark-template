@@ -7,14 +7,12 @@ const SignUp = () => {
     <Formik
       initialValues={{
         firstName: "",
-        lastName: "",
         email: "",
         password: "",
         confirmPassword: "",
       }}
       validationSchema={Yup.object().shape({
         firstName: Yup.string().required("First Name is required"),
-        lastName: Yup.string().required("Last Name is required"),
         email: Yup.string()
           .email("Email is invalid")
           .required("Email is required"),
@@ -31,9 +29,9 @@ const SignUp = () => {
       render={({ errors, status, touched }) => (
         <Form>
           <div className="form-group">
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="name">name</label>
             <Field
-              name="firstName"
+              name="name"
               type="text"
               className={
                 "form-control" +
@@ -42,22 +40,6 @@ const SignUp = () => {
             />
             <ErrorMessage
               name="firstName"
-              component="div"
-              className="invalid-feedback"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="lastName">Last Name</label>
-            <Field
-              name="lastName"
-              type="text"
-              className={
-                "form-control" +
-                (errors.lastName && touched.lastName ? " is-invalid" : "")
-              }
-            />
-            <ErrorMessage
-              name="lastName"
               component="div"
               className="invalid-feedback"
             />
