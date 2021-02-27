@@ -27,12 +27,13 @@ class NewsSection extends Component {
       })
       .catch(function (error) {
         // handle error
+        <div>Błąd połączenia z serwerem</div>
         console.log(error);
       });
     }
 
   render() {
-    return <div className={'container ' + styles.newsSection}>{this.state.posts}</div>;
+    return (this.state.posts.length === 0) ? null : <div className={'container ' + styles.newsSection}>{this.state.posts}</div>;
   }
 }
 
