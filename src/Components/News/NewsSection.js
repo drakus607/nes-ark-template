@@ -27,7 +27,6 @@ class NewsSection extends Component {
       })
       .catch(function (error) {
         // handle error
-        <div>Błąd połączenia z serwerem</div>
         console.log(error);
       });
     }
