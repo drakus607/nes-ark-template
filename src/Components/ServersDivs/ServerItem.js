@@ -51,14 +51,21 @@ const StyledItem = styled.div`
 `;
 
 const ServerItem = (props) => {
-  const [playersNum, setPlayers] = useState();
-  const [maxPlayers, setMaxPlayers] = useState();
-  const [curPing, setPing] = useState();
+  const [playersNum, setPlayers] = useState(0);
+  const [maxPlayers, setMaxPlayers] = useState(0);
+  const [curPing, setPing] = useState(0);
   const getServerInfo = () => {
-    axios.get("/core").then((info) => {
+     axios.get("/core").then((info) => {
       setPlayers(info.data.raw.numplayers);
       setMaxPlayers(info.data.maxplayers);
       setPing(info.data.ping);
+    }).catch(error => {
+      if (!error.response) {
+          // network error
+          error = 'Error - News Module couldnt connect to API';
+      } else {
+          error = error.message;
+      }
     });
   };
   useEffect(getServerInfo, []);
