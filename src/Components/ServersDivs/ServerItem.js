@@ -58,7 +58,7 @@ const ServerItem = (props) => {
     axios
       .get("/core")
       .then((info) => {
-        setPlayers(info.data.raw.numplayers);
+        setPlayers(info.data.players.length);
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
       })
