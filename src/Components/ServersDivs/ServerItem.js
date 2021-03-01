@@ -63,7 +63,7 @@ const ServerItem = (props) => {
         setPing(info.data.ping);
       })
       .catch((error) => {
-        if (!error.response) {
+        if (!error.message) {
           // network error
           error = "Error - Couldnt connect to API";
           console.log(error);
