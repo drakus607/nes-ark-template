@@ -34,7 +34,8 @@ class NewsSection extends Component {
       .catch((error) => {
         if (!error.response) {
           // network error
-          error = "Error - News Module couldnt connect to API";
+          error = "Error - Couldnt connect to API";
+          console.log(error);
         } else {
           error = error.message;
         }
