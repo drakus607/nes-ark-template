@@ -51,7 +51,7 @@ const StyledItem = styled.div`
 `;
 
 const ServerItem = (props) => {
-  const [playersNum, setPlayers] = useState([]);
+  const [playersNum, setPlayers] = useState();
   const [maxPlayers, setMaxPlayers] = useState();
   const [curPing, setPing] = useState();
   const getServerInfo = () => {
@@ -61,10 +61,9 @@ const ServerItem = (props) => {
         setPlayers(info.data.players.length);
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
-        console.log(info);
       })
       .catch((error) => {
-        if (!error.message) {
+        if (!error.response) {
           // network error
           error = "Error - Couldnt connect to API";
           console.log(error);
