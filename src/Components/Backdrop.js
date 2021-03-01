@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import {CloseMobileHandler} from './Navbar/Burger'
+import React from "react";
+import styled from "styled-components";
+import { CloseMobileHandler } from "./Navbar/Burger";
 
 const StyleBackdrop = styled.div`{
 display: none;
@@ -27,12 +27,10 @@ background: rgba(0, 0, 0, 0.5);
         opacity: 1;
       }
 }
-`
+`;
 
 const Backdrop = () => {
-    return (
-        <StyleBackdrop className="backdrop" onClick={CloseMobileHandler}/>
-    )
-}
+  return <StyleBackdrop className="backdrop" onClick={CloseMobileHandler} />;
+};
 
-export default Backdrop
+export default Backdrop;

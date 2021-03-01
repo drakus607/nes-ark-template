@@ -21,10 +21,6 @@ const StyledRules = styled.section`
       color: red;
     }
   }
-  & div {
-    margin-left: 3rem;
-    margin-right: 2rem;
-  }
   @media (min-width: 680px) {
     li {
       font-size: 1rem;
@@ -80,7 +76,8 @@ const listItems = rules.map((rule) => (
 const RulesSection = () => {
   return (
     <StyledRules id="rules" name="rules">
-      <TitleDiv className="container"
+      <TitleDiv
+        className="container"
         title="Zasady"
         subtitle="Poniżej znajdziesz zasady panujące na serwerach"
       />

@@ -55,19 +55,22 @@ const ServerItem = (props) => {
   const [maxPlayers, setMaxPlayers] = useState(0);
   const [curPing, setPing] = useState(0);
   const getServerInfo = () => {
-     axios.get("/core").then((info) => {
-      setPlayers(info.data.raw.numplayers);
-      setMaxPlayers(info.data.maxplayers);
-      setPing(info.data.ping);
-    }).catch(error => {
-      if (!error.response) {
+    axios
+      .get("/core")
+      .then((info) => {
+        setPlayers(info.data.raw.numplayers);
+        setMaxPlayers(info.data.maxplayers);
+        setPing(info.data.ping);
+      })
+      .catch((error) => {
+        if (!error.response) {
           // network error
-          error = 'Error - Couldnt connect to API';
+          error = "Error - Couldnt connect to API";
           console.log(error);
-      } else {
+        } else {
           error = error.message;
-      }
-    });
+        }
+      });
   };
   useEffect(getServerInfo, []);
   return (
