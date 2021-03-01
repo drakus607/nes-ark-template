@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import InfoBox from './InfoBox'
+import GlobalContext from '../../contexts/Global'
 
 const MoreInfoDiv = styled.div`
 display: flex;
@@ -37,13 +38,15 @@ h1 {
 
 
 const MoreInfo = () => {
+    const globalContext = React.useContext(GlobalContext);
+    const name = globalContext.user ? globalContext.user.profile.displayName : 'Anonim'
     return (
         <MoreInfoDiv data-aos="fade-right"
         data-aos-offset="500"
         data-aos-easing="ease-in-sine"
         data-aos-duration="600"
         className="aos-init">
-            <h1>Witaj na serwerze<br></br> <span>Never Ending Survival ARK</span></h1>
+            <h1>Witaj na serwerze {name}<br></br> <span>Never Ending Survival ARK</span></h1>
             <InfoBox />
         </MoreInfoDiv> 
     )
