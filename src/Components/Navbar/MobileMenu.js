@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import {CloseMobileHandler} from './Burger'
-import {IoClose} from 'react-icons/io5'
-import {Link} from 'react-scroll'
+import React from "react";
+import styled from "styled-components";
+import { CloseMobileHandler } from "./Burger";
+import { IoClose } from "react-icons/io5";
+import { Link } from "react-scroll";
+import GlobalContext from '../../contexts/Global'
 
 const StyledMobileMenu = styled.div`
 &.mobile {
@@ -59,23 +60,81 @@ const StyledMobileMenu = styled.div`
       opacity: 1;
       top: 0%;
     }
-`
-
+`;
 
 const MobileMenu = () => {
-    return (
-        <StyledMobileMenu id="mobile_menu" className="mobile hidden">
-        <ul className="mobile_navlinks">
-          <li><Link onClick={CloseMobileHandler} to="home" smooth={true} duration={500} >Home</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="servers" smooth={true} duration={500} offset={-25}>Serwery</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="commands" smooth={true} duration={500} offset={-25}>Komendy</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="rules" smooth={true} duration={500} offset={-25}>Zasady</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="donate" smooth={true} duration={500} offset={-25}>Donate</Link></li>
-          <li><Link onClick={CloseMobileHandler} to="footer" smooth={true} duration={500} offset={-25}>Discord</Link></li>
-        </ul>
-        <div id="close_mobile" onClick={CloseMobileHandler}><IoClose /></div>
-        </StyledMobileMenu>
-    )
-}
+  const globalContext = React.useContext(GlobalContext);
+  return (
+    <StyledMobileMenu id="mobile_menu" className="mobile hidden">
+      <ul className="mobile_navlinks">
+        <li>
+          <Link
+            onClick={CloseMobileHandler}
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={CloseMobileHandler}
+            to="servers"
+            smooth={true}
+            duration={500}
+            offset={-25}
+          >
+            Serwery
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={CloseMobileHandler}
+            to="commands"
+            smooth={true}
+            duration={500}
+            offset={-25}
+          >
+            Komendy
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={CloseMobileHandler}
+            to="rules"
+            smooth={true}
+            duration={500}
+            offset={-25}
+          >
+            Zasady
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={CloseMobileHandler}
+            to="donate"
+            smooth={true}
+            duration={500}
+            offset={-25}
+          >
+            Donate
+          </Link>
+        </li>
+        {globalContext.user && (
+          <a href="https://api.nes-ark.pl/auth/steam/">
+            <img
+              src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/sits_small.png"
+              alt="sign-in with steam"
+            />
+          </a>
+        )}
+      </ul>
+      <div id="close_mobile" onClick={CloseMobileHandler}>
+        <IoClose />
+      </div>
+    </StyledMobileMenu>
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;
