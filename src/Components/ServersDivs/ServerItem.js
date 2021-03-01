@@ -51,9 +51,9 @@ const StyledItem = styled.div`
 `;
 
 const ServerItem = (props) => {
-  const [playersNum, setPlayers] = useState(0);
-  const [maxPlayers, setMaxPlayers] = useState(0);
-  const [curPing, setPing] = useState(0);
+  const [playersNum, setPlayers] = useState([]);
+  const [maxPlayers, setMaxPlayers] = useState();
+  const [curPing, setPing] = useState();
   const getServerInfo = () => {
     axios
       .get("/core")
