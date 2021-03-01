@@ -72,7 +72,7 @@ const NavItems = () => {
             Donate
           </Link>
         </li>
-        {globalContext.user && (
+        {!globalContext.user && (
           <li>
             <a href="https://api.nes-ark.pl/auth/steam/">
               <img

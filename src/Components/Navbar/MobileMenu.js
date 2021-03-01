@@ -121,7 +121,7 @@ const MobileMenu = () => {
             Donate
           </Link>
         </li>
-        {globalContext.user && (
+        {!globalContext.user && (
           <a href="https://api.nes-ark.pl/auth/steam/">
             <img
               src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/sits_small.png"
