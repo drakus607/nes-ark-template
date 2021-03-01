@@ -11,7 +11,7 @@ class NewsSection extends Component {
 
   componentDidMount() {
     axios
-      .get("/posts")
+      .get("/posts",{withCredentials: true})
       .then((response) => {
         const posts = response.data;
         const sortedPosts = posts.sort((a, b) =>{
