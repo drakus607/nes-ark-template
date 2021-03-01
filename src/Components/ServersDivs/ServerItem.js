@@ -61,6 +61,7 @@ const ServerItem = (props) => {
         setPlayers(info.data.players.length);
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
+        console.log(info);
       })
       .catch((error) => {
         if (!error.message) {
