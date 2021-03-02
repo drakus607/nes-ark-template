@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CloseMobileHandler } from "./Burger";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-scroll";
-import GlobalContext from '../../contexts/Global'
+import GlobalContext from "../../contexts/Global";
 
 const StyledMobileMenu = styled.div`
 &.mobile {
@@ -110,17 +110,13 @@ const MobileMenu = () => {
             Zasady
           </Link>
         </li>
-        <li>
-          <Link
-            onClick={CloseMobileHandler}
-            to="donate"
-            smooth={true}
-            duration={500}
-            offset={-25}
-          >
-            Donate
-          </Link>
-        </li>
+        {globalContext.user && (
+          <li>
+            <Link to="donate" smooth={true} duration={500} offset={-25}>
+              Donate
+            </Link>
+          </li>
+        )}
         {!globalContext.user && (
           <a href="https://api.nes-ark.pl/auth/steam/">
             <img

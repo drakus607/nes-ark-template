@@ -40,7 +40,7 @@ function App() {
           {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
-          {user && <h1>Donateeeeee</h1>}
+          {user && <h1>Miejsce na sekcję donate</h1>}
           <Servers />
           <Commands />
           <RulesSection />
