@@ -78,6 +78,9 @@ const AddPost = () => {
         onSubmit={async (values, { setSubmitting, resetForm }) => {
           resetForm();
           await axios.post("/post", values);
+          alert(`Post został dodany,\n
+          Tytuł: ${values.postHead}\n
+          Treść: ${values.postBody}`);
           setSubmitting(false);
         }}
       >
