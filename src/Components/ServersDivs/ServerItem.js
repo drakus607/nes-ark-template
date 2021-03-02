@@ -52,13 +52,13 @@ const StyledItem = styled.div`
 
 const ServerItem = (props) => {
   const [playersNum, setPlayers] = useState();
-  const [maxPlayers, setMaxPlayers] = useState();
+  const [maxPlayers, setMaxPlayers] = useState(70);
   const [curPing, setPing] = useState();
   const getServerInfo = () => {
     axios
       .get("/core")
       .then((info) => {
-        setPlayers(info.data.players.length);
+        setPlayers(info.data.players.length());
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
       })
