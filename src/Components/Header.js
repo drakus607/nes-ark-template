@@ -18,7 +18,7 @@ width: 100%;
 background: white;
 z-index: 997;
 box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
-&p{
+& p {
     display: none;
 }
 @media(min-width: 520px){
@@ -30,6 +30,11 @@ box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
     }
     & p {
         display: flex;
+        font-size: 0.7rem;
+        font-family: "Poppins", sans-serif;
+        position: fixed;
+        top: 5.5%;
+        right: 0;
     }
 }
 `
@@ -41,7 +46,7 @@ const Header = () => {
             <Logo/>
             {width >= 960 && <NavItems/>}
             {width <= 960 && <Burger />}
-            {globalContext.user && <p>Jesteś zalogowany jako: {globalContext.user.profile.displayName}</p>}
+            {globalContext.user && width >= 960 ? <p>Jesteś zalogowany jako: <span>{globalContext.user.profile.displayName}</span></p> : null}
         </NavContainer>
     )
 }
