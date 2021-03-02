@@ -58,7 +58,7 @@ const ServerItem = (props) => {
     axios
       .get("/core")
       .then((info) => {
-        setPlayers(info.data.players.length());
+        setPlayers(info.data.players);
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
       })
@@ -77,7 +77,7 @@ const ServerItem = (props) => {
     >
       <h2>{props.title}</h2>
       <h3 className={props.badge}>{props.status}</h3>
-      <RatesDiv players={playersNum} max={maxPlayers} ping={curPing} />
+      <RatesDiv players={playersNum.length} max={maxPlayers} ping={curPing} />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
   );
