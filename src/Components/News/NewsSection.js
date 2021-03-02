@@ -3,7 +3,6 @@ import axios from "axios";
 import NewPost from "./NewPost";
 import styles from "./NewsSection.module.css";
 
-
 class NewsSection extends Component {
   state = {
     posts: [],
@@ -11,15 +10,14 @@ class NewsSection extends Component {
 
   componentDidMount() {
     axios
-      .get("/posts",{withCredentials: true})
+      .get("/posts", { withCredentials: true })
       .then((response) => {
         const posts = response.data;
-        const sortedPosts = posts.sort((a, b) =>{
+        const sortedPosts = posts.sort((a, b) => {
           let dateA = new Date(a.createdAt);
           let dateB = new Date(b.createdAt);
-          return dateB - dateA  
-        }
-        );
+          return dateB - dateA;
+        });
         const postsList = sortedPosts.map((post) => (
           <NewPost
             key={post._id}

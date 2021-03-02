@@ -41,7 +41,7 @@ function App() {
           {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
-          {user && <DonateSection/>}
+          {user && <DonateSection />}
           <Servers />
           <Commands />
           <RulesSection />

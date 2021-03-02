@@ -69,7 +69,7 @@ const NavItems = () => {
         </li>
         {globalContext.user && (
           <li>
-            <Link to="donate" smooth={true} duration={500} offset={-50}>
+            <Link to="donate" smooth={true} duration={500} offset={-75}>
               Donate
             </Link>
           </li>

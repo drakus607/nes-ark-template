@@ -20,7 +20,8 @@ const StyledRules = styled.section`
     text-shadow: 1.5px 1px #ccc;
     font-size: 1rem;
   }
-  & h3, h4 {
+  & h3,
+  h4 {
     text-align: center;
   }
   @media (min-width: 680px) {
@@ -28,7 +29,7 @@ const StyledRules = styled.section`
       font-size: 1rem;
     }
     & li > h3 {
-      font-size: 1.3rem
+      font-size: 1.3rem;
     }
   }
 `;

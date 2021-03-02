@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const StyledInfoBox = styled.div`
 display: flex;
@@ -23,6 +23,9 @@ flex-direction: column;
     font-size: 0.8rem;
     color: black;
 }
+& i {
+    font-size: 0.7rem;
+}
 @media(min-width:400px){
     h2{
         font-size: 1.2rem;
@@ -38,21 +41,26 @@ flex-direction: column;
         font-size: 2rem;
     }
     & p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
-`
+`;
 
 const InfoBox = () => {
-    return (
-        <StyledInfoBox>
-            <h2>Informacje o serwerze</h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-        </StyledInfoBox>
-    )
-}
+  return (
+    <StyledInfoBox>
+      <h2>Informacje o serwerze</h2>
+      <p>
+        Projekt NES ARK jest przedsięwzięciem, zakładającym utworzenie sieci
+        serwerów do gry ARK: Survival Evolved. W niedalekiej przyszłości
+        społeczność będzie głosować nad ustawieniami gry oraz dodatkami w każdym
+        z kolejnych sezonów. Każdy z serwerów będzie przygotowany na przyjęcie
+        graczy Epic Games oraz Steam . Aktualnie świętujemy rozpoczęcie
+        pierwszego sezonu, życzymy wam dobrej zabawy i udanych łowów.
+        <i> - Administracja NES ARK</i>
+      </p>
+    </StyledInfoBox>
+  );
+};
 
-export default InfoBox
+export default InfoBox;
