@@ -52,16 +52,14 @@ const StyledItem = styled.div`
 
 const ServerItem = (props) => {
   const [playersNum, setPlayers] = useState();
-  const [maxPlayers, setMaxPlayers] = useState(70);
-  const [curPing, setPing] = useState();
+  const [maxPlayers, setMaxPlayers] = useState();
   const getServerInfo = () => {
     axios
       .get("/core")
-      .then((info) => {
-        setPlayers(info.data.players);
-        setMaxPlayers(info.data.maxplayers);
-        setPing(info.data.ping);
-        console.log(info);
+      .then((response) => {
+        setPlayers(response.data.players);
+        setMaxPlayers(response.data.info.MaxPlayers);
+        console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -78,11 +76,7 @@ const ServerItem = (props) => {
     >
       <h2>{props.title}</h2>
       <h3 className={props.badge}>{props.status}</h3>
-      <RatesDiv
-        players={playersNum ? playersNum.length : 0}
-        max={maxPlayers}
-        ping={curPing}
-      />
+      <RatesDiv players={playersNum ? playersNum.length : 0} max={maxPlayers} />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
   );

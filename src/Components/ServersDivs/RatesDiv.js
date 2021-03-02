@@ -17,7 +17,7 @@ const RatesDiv = (props) => {
         </span>
       </h3>
       <h3>
-        Mnożnik XP: <span>{props.ping}</span>
+        Mnożnik XP: <span>Exp</span>
       </h3>
       <h3>
         Taming Speed: <span>*XX</span>
