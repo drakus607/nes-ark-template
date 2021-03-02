@@ -64,7 +64,7 @@ const ServerItem = (props) => {
         console.log(info);
       })
       .catch((error) => {
-          console.log(error);
+        console.log(error);
       });
   };
   useEffect(getServerInfo, []);
@@ -78,7 +78,11 @@ const ServerItem = (props) => {
     >
       <h2>{props.title}</h2>
       <h3 className={props.badge}>{props.status}</h3>
-      <RatesDiv players={playersNum ? playersNum.length : 0 } max={maxPlayers} ping={curPing} />
+      <RatesDiv
+        players={playersNum ? playersNum.length : 0}
+        max={maxPlayers}
+        ping={curPing}
+      />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
   );

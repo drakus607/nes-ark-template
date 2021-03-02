@@ -67,17 +67,19 @@ const NavItems = () => {
             Zasady
           </Link>
         </li>
-        <li>
-          <Link to="donate" smooth={true} duration={500} offset={-25}>
-            Donate
-          </Link>
-        </li>
+        {globalContext.user && (
+          <li>
+            <Link to="donate" smooth={true} duration={500} offset={-25}>
+              Donate
+            </Link>
+          </li>
+        )}
         {!globalContext.user && (
           <li>
             <a href="https://api.nes-ark.pl/auth/steam/">
               <img
                 src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/steamworks_docs/english/sits_small.png"
-                alt="sign-in with steam"
+                alt="sign-in"
               />
             </a>
           </li>

@@ -12,15 +12,13 @@ import useWindowSize from "./Components/Vendors/useWindowSize";
 import TestDiv from "./Components/TestDiv";
 import NewsSection from "./Components/News/NewsSection";
 import { Route, Switch } from "react-router-dom";
-import SignUp from "./Components/News/SignUp";
 import AddPost from "./Posts/AddPost";
 import axios from "axios";
-import GlobalContext from './contexts/Global'
-import {useEffect, useState} from 'react'
+import GlobalContext from "./contexts/Global";
+import { useEffect, useState } from "react";
 //set API baseurl
 const { REACT_APP_URL } = process.env;
 axios.defaults.baseURL = REACT_APP_URL;
-
 
 function App() {
   const { width } = useWindowSize();
@@ -29,12 +27,12 @@ function App() {
   });
   const [user, setUser] = useState();
   useEffect(() => {
-    axios.get('/auth', {withCredentials: true}).then(response =>{
+    axios.get("/auth", { withCredentials: true }).then((response) => {
       setUser(response.data);
-    })
-  }, [])
+    });
+  }, []);
   return (
-    <GlobalContext.Provider value={{user}}>
+    <GlobalContext.Provider value={{ user }}>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -42,7 +40,7 @@ function App() {
           {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
-          {/*wrzucam tutaj forma  */}
+          {user && <h1>Donateeeeee</h1>}
           <Servers />
           <Commands />
           <RulesSection />
@@ -50,9 +48,7 @@ function App() {
         </Route>
         <Route exact path="/new-post">
           <AddPost />
-          <TestDiv />
         </Route>
-        <Route exact path="/register" component={SignUp}></Route>
         <Route exact path="/posts">
           <TestDiv />
         </Route>
