@@ -36,6 +36,10 @@ box-shadow: 0 4px 4px -4px rgb(0 0 0 / 20%);
         top: 5.5%;
         right: 0;
     }
+    & span {
+        color: rgb(16, 110, 234);
+        font-weight: 700;
+    }
 }
 `
 const Header = () => {
@@ -46,7 +50,7 @@ const Header = () => {
             <Logo/>
             {width >= 960 && <NavItems/>}
             {width <= 960 && <Burger />}
-            {globalContext.user && width >= 960 ? <p>Jesteś zalogowany jako: <span>{globalContext.user.profile.displayName}</span></p> : null}
+            {globalContext.user && width >= 960 ? <p>Jesteś zalogowany jako:  <span> {globalContext.user.profile.displayName}</span></p> : null}
         </NavContainer>
     )
 }
