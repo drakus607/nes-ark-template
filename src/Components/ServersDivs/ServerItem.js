@@ -56,11 +56,12 @@ const ServerItem = (props) => {
   const [curPing, setPing] = useState();
   const getServerInfo = () => {
     axios
-      .get("/core")
+      .get("https://arkservers.net/api/query/51.38.145.171:27015")
       .then((info) => {
         setPlayers(info.data.players);
         setMaxPlayers(info.data.maxplayers);
         setPing(info.data.ping);
+        console.log(info);
       })
       .catch((error) => {
           console.log(error);
@@ -77,7 +78,7 @@ const ServerItem = (props) => {
     >
       <h2>{props.title}</h2>
       <h3 className={props.badge}>{props.status}</h3>
-      <RatesDiv players={(playersNum) ? playersNum.length : 0 } max={maxPlayers} ping={curPing} />
+      <RatesDiv players={playersNum ? playersNum.length : 0 } max={maxPlayers} ping={curPing} />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
   );
