@@ -56,7 +56,7 @@ const ServerItem = (props) => {
   const [curPing, setPing] = useState();
   const getServerInfo = () => {
     axios
-      .get("https://arkservers.net/api/query/51.38.145.171:27015")
+      .get("/core")
       .then((info) => {
         setPlayers(info.data.players);
         setMaxPlayers(info.data.maxplayers);
