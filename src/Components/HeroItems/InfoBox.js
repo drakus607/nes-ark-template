@@ -10,7 +10,7 @@ flex-direction: column;
     padding: 1rem;
     font-size: 2rem;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #b9b9b97a;
     font-family: "Poppins", sans-serif;
 }
 & h2 {
@@ -57,7 +57,7 @@ const InfoBox = () => {
         z kolejnych sezonów. Każdy z serwerów będzie przygotowany na przyjęcie
         graczy Epic Games oraz Steam . Aktualnie świętujemy rozpoczęcie
         pierwszego sezonu, życzymy wam dobrej zabawy i udanych łowów.
-        <i> - Administracja NES ARK</i>
+        <i> - NES-ARK Team</i>
       </p>
     </StyledInfoBox>
   );
