@@ -13,63 +13,68 @@ const StyledRules = styled.section`
   & li {
     padding: 0 1rem;
     list-style: none;
-    font-size: 0.8rem;
-    & span:last-of-type {
-      text-decoration: underline;
-    }
-    & span:first-of-type {
-      color: red;
-    }
+    font-size: 0.9rem;
+  }
+  & li > h3 {
+    color: #ff4911;
+    text-shadow: 1.5px 1px #ccc;
+    font-size: 1rem;
+  }
+  & h3, h4 {
+    text-align: center;
   }
   @media (min-width: 680px) {
     li {
       font-size: 1rem;
+    }
+    & li > h3 {
+      font-size: 1.3rem
     }
   }
 `;
 const rules = [
   {
     id: 1,
-    title: "No cheating",
-    subtitle: "This includes hacks, map glitches or bots (macros are okay).",
+    title: "Zakaz oszukiwania",
+    subtitle:
+      "Surowo zabronione jest używanie hacków, bugów mapy oraz botów (makra są dozwolone).",
   },
   {
     id: 2,
-    title: "Tribe Names",
+    title: "Nazwy plemion",
     subtitle:
-      "Your tribe name cannot be offensive, contain advertising or include swear/vulgar words, this is a game (with kids who play) and those who dont take it seriously should go elsewhere",
+      "Nazwa twojego plemienia nie może być obraźliwa, zawierać reklamy lub posiadać słów niecenzuralnych. Należy pamiętać, że to jest gra i mogą być w niej nieletni użytkownicy.",
   },
   {
     id: 3,
-    title: "Player Names",
+    title: "Nazwa postaci",
     subtitle:
-      "Your player name cannot be something with derogatory terms, swear words ... this indicates you dont take this game seriously and are just here to troll ... if the admin feels the name is offensive it will be changed.",
+      "Twoja nazwa postaci nie powinna zawierać rasistowskich/obelżywych słów. Jeśli Administrator uzna, że twoja nazwa jest obraźliwa, ma prawo ją zmienić.",
   },
   {
     id: 4,
-    title: "Tribe Limits",
+    title: "Limity plemion",
     subtitle:
-      "You must not use alliances to skirt the Tribe max e.g build your bases all together in 1 big compound, and must act independently, e.g 1 tribe leader telling the other tribe what to do..",
+      "Nie powinieneś używać sojuszy do tworzenia jednego wielkiego plemienia np. posiadającego wspólną bazę. Plemiona powinny być niezależne i nie podlegać pod inne, np. jeden lider nie powinien rozkazywać kilkoma plemionami w sojuszu..",
   },
   {
     id: 5,
-    title: "General",
+    title: "Ogólne",
     subtitle:
-      "Placing foundations/pillars to claim land or to block mass amount of resource spawns is also disallowed and may result in your structure being removed or entire tribe’s structures wiped (if excessive). Structures that are abandoned or made demolish-able will be auto-demolished by the server.",
+      "Ustawianie fundamentów/filarów do przejmowania terenu lub blockowania dużej ilości zasobów(szczególnie ich spawnów) jest zabronione i może skutkować usunięciem struktur, jeśli zachowanie będzie się powtarzać. Struktury porzucone będą skrupulatnie czyszczone z mapy przez serwer..",
   },
   {
     id: 6,
-    title: "Advertising",
+    title: "Reklamy",
     subtitle:
-      "Players shall not advertise other servers, YouTube or Twitch addresses in game, if you need to share a TS that is fine as long as its related to general chat requests... advertising will result in an immediate ban.",
+      "Gracze nie powinni reklamować innych serwerów, kanałów YouTube/Twitch. Dozwolone jest wymienianie się adresami Discord/TeamSpeak, jeśli jest związane z ogólnym zapytaniem o nie na czacie... Próby reklam będą skutkować natychmiastowym banem.",
   },
 ];
 
 const listItems = rules.map((rule) => (
   <li key={rule.id}>
-    <h4>
-      {rule.id}. <span>{rule.title}</span> : <span>{rule.subtitle}</span>
-    </h4>
+    <h3>{rule.title}</h3>
+    <h4>{rule.subtitle}</h4>
   </li>
 ));
 

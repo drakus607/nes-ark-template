@@ -59,7 +59,7 @@ const ServerItem = (props) => {
       .then((response) => {
         setPlayers(response.data.players);
         setMaxPlayers(response.data.info.MaxPlayers);
-        console.log(response);
+        // console.log(response);
       })
       .catch((error) => {
         console.log(error);

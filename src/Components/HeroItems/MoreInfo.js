@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import InfoBox from "./InfoBox";
-import GlobalContext from "../../contexts/Global";
+// import GlobalContext from "../../contexts/Global";
 
 const MoreInfoDiv = styled.div`
   display: flex;
@@ -37,10 +37,10 @@ const MoreInfoDiv = styled.div`
 `;
 
 const MoreInfo = () => {
-  const globalContext = React.useContext(GlobalContext);
-  const name = globalContext.user
-    ? globalContext.user.profile.displayName
-    : "Anonim";
+  // const globalContext = React.useContext(GlobalContext);
+  // const name = globalContext.user
+  //   ? globalContext.user.profile.displayName
+  //   : "Anonim";
   return (
     <MoreInfoDiv
       data-aos="fade-right"
@@ -50,7 +50,7 @@ const MoreInfo = () => {
       className="aos-init"
     >
       <h1>
-        Witaj na serwerze {name}
+        Witaj na serwerze
         <br></br> <span>Never Ending Survival ARK</span>
       </h1>
       <InfoBox />

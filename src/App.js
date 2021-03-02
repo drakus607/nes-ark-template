@@ -16,6 +16,7 @@ import AddPost from "./Posts/AddPost";
 import axios from "axios";
 import GlobalContext from "./contexts/Global";
 import { useEffect, useState } from "react";
+import DonateSection from "./Components/Donate/DonateSection";
 //set API baseurl
 const { REACT_APP_URL } = process.env;
 axios.defaults.baseURL = REACT_APP_URL;
@@ -40,7 +41,7 @@ function App() {
           {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
-          {user && <h1>Miejsce na sekcję donate</h1>}
+          {!user && <DonateSection/>}
           <Servers />
           <Commands />
           <RulesSection />
