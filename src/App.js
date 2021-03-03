@@ -9,9 +9,8 @@ import Commands from "./Components/Commands";
 import MobileMenu from "./Components/Navbar/MobileMenu";
 import Backdrop from "./Components/Backdrop";
 import useWindowSize from "./Components/Vendors/useWindowSize";
-import TestDiv from "./Components/TestDiv";
 import NewsSection from "./Components/News/NewsSection";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import AddPost from "./Posts/AddPost";
 import axios from "axios";
 import GlobalContext from "./contexts/Global";
@@ -41,7 +40,6 @@ function App() {
           {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
-          {user && <DonateSection />}
           <Servers />
           <Commands />
           <RulesSection />
@@ -50,8 +48,8 @@ function App() {
         <Route exact path="/new-post">
           <AddPost />
         </Route>
-        <Route exact path="/posts">
-          <TestDiv />
+        <Route exact path="/donate">
+          {user ? <DonateSection /> : <Redirect to="/" />}
         </Route>
       </Switch>
     </GlobalContext.Provider>

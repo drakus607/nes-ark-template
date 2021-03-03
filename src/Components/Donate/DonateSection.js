@@ -1,21 +1,23 @@
 import React from "react";
-import styled from "styled-components";
 import TitleDiv from "../ServersDivs/TitleDiv";
+import CoinsSection from "./CoinsSection";
+import styled from "styled-components";
 
 const StyledDonate = styled.section`
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  padding: 90px 0;
+  justify-content: space-around;
 `;
 
 const DonateSection = () => {
   return (
-    <StyledDonate id="donate" name="donate" className="container">
+    <StyledDonate>
       <TitleDiv
-        title="Sklep VIP"
-        subtitle="Sklep z punktami oraz pakietami VIP"
+        title="Dotacje"
+        subtitle="Poniżej znajdziesz możliwe pakiety dotacji oraz nagród przyznawanych za wsparcie serwera."
       />
-      <h3>costam costam</h3>
+      <CoinsSection />
     </StyledDonate>
   );
 };

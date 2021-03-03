@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import GlobalContext from "../../contexts/Global";
+import { Link as RLink } from "react-router-dom";
 
 const StyledNavItems = styled.div`
   #links {
@@ -69,9 +70,7 @@ const NavItems = () => {
         </li>
         {globalContext.user && (
           <li>
-            <Link to="donate" smooth={true} duration={500} offset={-75}>
-              Donate
-            </Link>
+            <RLink to="/donate">Donate</RLink>
           </li>
         )}
         {!globalContext.user && (

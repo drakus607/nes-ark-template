@@ -4,6 +4,7 @@ import { CloseMobileHandler } from "./Burger";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-scroll";
 import GlobalContext from "../../contexts/Global";
+import { Link as RLink } from "react-router-dom";
 
 const StyledMobileMenu = styled.div`
 &.mobile {
@@ -112,9 +113,7 @@ const MobileMenu = () => {
         </li>
         {globalContext.user && (
           <li>
-            <Link to="donate" smooth={true} duration={500} offset={-25}>
-              Donate
-            </Link>
+            <RLink to="/donate">Donate</RLink>
           </li>
         )}
         {!globalContext.user && (
