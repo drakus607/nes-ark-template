@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import GlobalContext from "../../contexts/Global";
-import { Link as RLink } from "react-router-dom";
+import { Link as RLink, Switch, Route } from "react-router-dom";
 
 const StyledNavItems = styled.div`
   #links {
@@ -50,29 +50,33 @@ const NavItems = () => {
       <ul id="links">
         <li>
           <Link to="home" smooth={true} duration={500}>
-            Home
+            <RLink to="/">Home</RLink>
           </Link>
         </li>
-        <li>
-          <Link to="servers" smooth={true} duration={500} offset={-25}>
-            Serwery
-          </Link>
-        </li>
-        <li>
-          <Link to="commands" smooth={true} duration={500} offset={-25}>
-            Komendy
-          </Link>
-        </li>
-        <li>
-          <Link to="rules" smooth={true} duration={500} offset={-25}>
-            Zasady
-          </Link>
-        </li>
-        {globalContext.user && (
-          <li>
-            <RLink to="/donate">Donate</RLink>
-          </li>
-        )}
+        <Switch>
+          <Route exact path="/">
+            <li>
+              <Link to="servers" smooth={true} duration={500} offset={-25}>
+                Serwery
+              </Link>
+            </li>
+            <li>
+              <Link to="commands" smooth={true} duration={500} offset={-25}>
+                Komendy
+              </Link>
+            </li>
+            <li>
+              <Link to="rules" smooth={true} duration={500} offset={-25}>
+                Zasady
+              </Link>
+            </li>
+            {globalContext.user && (
+              <li>
+                <RLink to="/donate">Donate</RLink>
+              </li>
+            )}
+          </Route>
+        </Switch>
         {!globalContext.user && (
           <li>
             <a href="https://api.nes-ark.pl/auth/steam/">
