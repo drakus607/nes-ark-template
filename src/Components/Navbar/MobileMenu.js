@@ -113,7 +113,7 @@ const MobileMenu = () => {
               </Link>
             </li>
             {globalContext.user && (
-              <li>
+              <li onClick={CloseMobileHandler}>
                 <RLink to="/donate">Donate</RLink>
               </li>
             )}
