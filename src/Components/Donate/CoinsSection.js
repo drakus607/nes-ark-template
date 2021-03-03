@@ -14,7 +14,7 @@ const COIN_PKGS = [
     id: "small",
     title: "50 monet",
     imgurl:
-      "https://res.cloudinary.com/ddq7mrhkh/image/upload/c_scale,f_auto,q_46,w_600/v1614767127/nes-ark-template/pngkey.com-money-falling-png-29404_kmuupr.png",
+      "https://res.cloudinary.com/ddq7mrhkh/image/upload/c_scale,q_40,w_800/v1614767127/nes-ark-template/pngkey.com-money-falling-png-29404_kmuupr.webp",
     element: "p",
     description: "50 monet do wydania w naszym sklepiku.",
   },
