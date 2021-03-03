@@ -113,13 +113,13 @@ const MobileMenu = () => {
                 Zasady
               </Link>
             </li>
+            {globalContext.user && (
+              <li>
+                <RLink to="/donate">Donate</RLink>
+              </li>
+            )}
           </Route>
         </Switch>
-        {globalContext.user && (
-          <li>
-            <RLink to="/donate">Donate</RLink>
-          </li>
-        )}
         {!globalContext.user && (
           <a href="https://api.nes-ark.pl/auth/steam/">
             <img
