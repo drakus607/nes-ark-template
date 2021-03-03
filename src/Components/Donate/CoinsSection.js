@@ -6,7 +6,6 @@ import PointsPackage from "./Packages/PointsPackage";
 const StyledDiv = styled.section`
   display: flex;
   flex-wrap: wrap;
-  padding: 90px 0;
   justify-content: space-around;
 `;
 

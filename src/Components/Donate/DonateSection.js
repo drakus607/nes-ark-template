@@ -2,6 +2,7 @@ import React from "react";
 import TitleDiv from "../ServersDivs/TitleDiv";
 import CoinsSection from "./CoinsSection";
 import styled from "styled-components";
+import VipSection from "./VipSection";
 
 const StyledDonate = styled.section`
   display: flex;
@@ -17,6 +18,7 @@ const DonateSection = () => {
         title="Dotacje"
         subtitle="Poniżej znajdziesz możliwe pakiety dotacji oraz nagród przyznawanych za wsparcie serwera."
       />
+      <VipSection />
       <CoinsSection />
     </StyledDonate>
   );
