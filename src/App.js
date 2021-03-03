@@ -34,10 +34,10 @@ function App() {
   return (
     <GlobalContext.Provider value={{ user }}>
       <Header />
+      {width <= 960 && <Backdrop />}
+      {width <= 960 && <MobileMenu />}
       <Switch>
         <Route exact path="/">
-          {width <= 960 && <Backdrop />}
-          {width <= 960 && <MobileMenu />}
           <Hero />
           <NewsSection />
           <Servers />
