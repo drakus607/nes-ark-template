@@ -28,7 +28,6 @@ const StyledMobileMenu = styled.div`
     flex-direction: column;
     list-style-type: none;    
     text-align: center;
-    margin-bottom: 0;
     margin-top: 0.5rem;
     padding: 0;
 }
