@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
+import styles from "./AddPost.module.css";
+import classes from "./AddPost.module.css";
 
 //tworzenie inputa na bazie useField(props) zaebane z official tutoriala formika XD
 
@@ -9,7 +11,9 @@ const MyTextArea = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label className={classes.label} htmlFor={props.id || props.name}>
+        {label}
+      </label>
       <textarea
         rows="5"
         cols="33"
@@ -18,7 +22,7 @@ const MyTextArea = ({ label, ...props }) => {
         {...props}
       ></textarea>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className={classes.error}>{meta.error}</div>
       ) : null}
     </>
   );
@@ -28,10 +32,12 @@ const MyTextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <>
-      <label htmlFor={props.id || props.name}>{label}</label>
+      <label className={classes.label} htmlFor={props.id || props.name}>
+        {label}
+      </label>
       <input className="text-input" {...field} {...props} />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className={classes.error}>{meta.error}</div>
       ) : null}
     </>
   );
@@ -41,10 +47,12 @@ const MySelect = ({ label, ...props }) => {
   const [field, meta] = useField(props);
   return (
     <div>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <select {...field} {...props} />
+      <label className={classes.label} htmlFor={props.id || props.name}>
+        {label}
+      </label>
+      <select className={classes.select} {...field} {...props} />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <div className={classes.error}>{meta.error}</div>
       ) : null}
     </div>
   );
@@ -84,7 +92,7 @@ const AddPost = () => {
           setSubmitting(false);
         }}
       >
-        <Form>
+        <Form className={styles.form}>
           <MyTextInput
             label="Tytuł: "
             name="postHead"
@@ -99,7 +107,7 @@ const AddPost = () => {
             placeholder="Treść"
           />
           <MyTextInput
-            label="Hasełko"
+            label="Hasło"
             name="password"
             type="text"
             placeholder="Podaj hasło"

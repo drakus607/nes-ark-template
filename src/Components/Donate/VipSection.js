@@ -17,6 +17,7 @@ const VIP_PKGS = [
     element: "p",
     description:
       "Dzięki tej nagrodzie, zostaniesz dodany do whitelist na naszym serwerze i będzie na Ciebie czekać zawsze wolny slot aby się połączyć.",
+    price: 15,
   },
   {
     id: "VIP",
@@ -25,6 +26,7 @@ const VIP_PKGS = [
       "https://res.cloudinary.com/ddq7mrhkh/image/upload/q_45/v1614779667/nes-ark-template/pngkey.com-vip-png-455790_bjjzk1.webp",
     element: "p",
     description: "VIP Standard lorem ipsum",
+    price: 30,
   },
   {
     id: "Super VIP",
@@ -34,6 +36,7 @@ const VIP_PKGS = [
     element: "p",
     description:
       "Dzięki tej nagrodzie, dostaniesz XXXXX z item shopu, ileś pkt na godzinę i prestiżowy badge",
+    price: 45,
   },
 ];
 
@@ -46,6 +49,7 @@ const vipList = VIP_PKGS.map((pkg) => {
       imgurl={pkg.imgurl}
       element={pkg.element}
       description={pkg.description}
+      price={pkg.price}
     />
   );
 });

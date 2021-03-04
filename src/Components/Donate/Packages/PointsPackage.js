@@ -16,9 +16,23 @@ const useStyles = makeStyles({
   media: {
     height: 140,
     backgroundSize: "contain",
-    marginTop: 48,
   },
   title: {
+    textAlign: "center",
+  },
+  button: {
+    height: "100%",
+  },
+  price: {
+    fontWeight: 700,
+    letterSpacing: 0.8,
+    color: "green",
+    position: "absolute",
+    bottom: "0%",
+    left: "40%",
+  },
+  body: {
+    marginBottom: "2rem",
     textAlign: "center",
   },
 });
@@ -26,8 +40,8 @@ const useStyles = makeStyles({
 const PointsPackage = (props) => {
   const classes = useStyles();
   return (
-    <Card className={classes.root} elevation={5}>
-      <CardActionArea>
+    <Card className={classes.root}>
+      <CardActionArea className={classes.button}>
         <CardMedia
           className={classes.media}
           image={props.imgurl}
@@ -46,13 +60,17 @@ const PointsPackage = (props) => {
             variant="body2"
             color="textSecondary"
             component={props.element}
+            className={classes.body}
           >
             {props.description}
+            {props.price && (
+              <h2 className={classes.price}>{props.price + "  PLN"}</h2>
+            )}
           </Typography>
         </CardContent>
       </CardActionArea>
       {/* <CardActions>
-      <Button size="small" color="primary">
+        <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">

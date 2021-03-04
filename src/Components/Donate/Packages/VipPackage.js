@@ -20,13 +20,28 @@ const useStyles = makeStyles({
   title: {
     textAlign: "center",
   },
+  button: {
+    height: "100%",
+  },
+  price: {
+    fontWeight: 700,
+    letterSpacing: 0.8,
+    color: "green",
+    position: "absolute",
+    bottom: "0%",
+    left: "40%",
+  },
+  body: {
+    marginBottom: "2rem",
+    textAlign: "center",
+  },
 });
 
 const VipPackage = (props) => {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea className={classes.button}>
         <CardMedia
           className={classes.media}
           image={props.imgurl}
@@ -45,8 +60,12 @@ const VipPackage = (props) => {
             variant="body2"
             color="textSecondary"
             component={props.element}
+            className={classes.body}
           >
             {props.description}
+            {props.price && (
+              <h2 className={classes.price}>{props.price + "  PLN"}</h2>
+            )}
           </Typography>
         </CardContent>
       </CardActionArea>

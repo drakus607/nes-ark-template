@@ -46,7 +46,7 @@ function App() {
           <Footer />
         </Route>
         <Route exact path="/new-post">
-          <AddPost />
+          {user ? <AddPost /> : <Redirect to="/" />}
         </Route>
         <Route exact path="/donate">
           {user ? <DonateSection /> : <Redirect to="/" />}
