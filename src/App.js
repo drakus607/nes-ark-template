@@ -16,6 +16,7 @@ import axios from "axios";
 import GlobalContext from "./contexts/Global";
 import { useEffect, useState } from "react";
 import DonateSection from "./Components/Donate/DonateSection";
+
 //set API baseurl
 const { REACT_APP_URL } = process.env;
 axios.defaults.baseURL = REACT_APP_URL;

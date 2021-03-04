@@ -19,10 +19,14 @@ const StyledRules = styled.section`
     color: #ff4911;
     text-shadow: 1.5px 1px #ccc;
     font-size: 1rem;
+    margin-bottom: 0;
   }
   & h3,
   h4 {
     text-align: center;
+  }
+  & h4 {
+    margin-top: 0;
   }
   @media (min-width: 680px) {
     li {

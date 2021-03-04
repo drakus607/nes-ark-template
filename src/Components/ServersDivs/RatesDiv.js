@@ -17,22 +17,22 @@ const RatesDiv = (props) => {
         </span>
       </h3>
       <h3>
-        Mnożnik XP: <span>Exp</span>
+        Mnożnik XP: <span>2x</span>
       </h3>
       <h3>
-        Taming Speed: <span>*XX</span>
+        Czas oswajania: <span>*XX</span>
       </h3>
       <h3>
-        Harvest: <span>XX</span>
+        Zbieranie: <span>XX</span>
       </h3>
       <h3>
-        Egg Hatch: <span>XX</span>
+        Wykluwanie jaj: <span>XX</span>
       </h3>
       <h3>
-        Maturation: <span>XX</span>
+        Dorastanie: <span>XX</span>
       </h3>
       <h3>
-        Max lvl dino: <span>XX</span>
+        Maksymalny poziom dino: <span>XX</span>
       </h3>
     </StyledRates>
   );
