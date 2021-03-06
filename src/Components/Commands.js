@@ -20,18 +20,17 @@ const StyledCommands = styled.section`
 `;
 
 const commands = [
-  { id: 1, command: "/reset", desc: "cos resetuje" },
-  { id: 2, command: "/sklep", desc: "otwiera sklep" },
-  { id: 3, command: "/start", desc: "wysyla na pozycje start" },
-  { id: 4, command: "/costam", desc: "costamcośtamuje" },
-  { id: 5, command: "/template", desc: "testowe" },
+  { id: 1, command: "/sklep", desc: "Aby otworzyć sklep" },
+  { id: 2, command: "/kup [przedmiot]", desc: "podstaw nazwę przedmiotu, którą zamierzasz kupić" },
+  { id: 3, command: "/pomocsklep", desc: "aby uzyskać pomoc dotyczącą funkcjonowania sklepu" },
+  { id: 4, command: "/sprzedaj", desc: "aby otworzyć menu sprzedaży" },
 ];
 
 const commandItem = commands.map((item) => (
   <li key={item.id}>
     <h4>
-      <span>{item.command}</span> - <span>{item.desc}</span>{" "}
-    </h4>{" "}
+      <span>{item.command}</span> - <span>{item.desc}</span>
+    </h4>
   </li>
 ));
 
