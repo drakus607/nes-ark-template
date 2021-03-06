@@ -20,19 +20,19 @@ const RatesDiv = (props) => {
         Mnożnik XP: <span>2x</span>
       </h3>
       <h3>
-        Czas oswajania: <span>*XX</span>
+        Czas oswajania: <span>4x</span>
       </h3>
       <h3>
-        Zbieranie: <span>XX</span>
+        Zbieranie: <span>4x</span>
       </h3>
       <h3>
-        Wykluwanie jaj: <span>XX</span>
+        Wykluwanie jaj: <span>5x</span>
       </h3>
       <h3>
-        Dorastanie: <span>XX</span>
+        Dorastanie: <span>5x</span>
       </h3>
       <h3>
-        Maksymalny poziom dino: <span>XX</span>
+        Max poziom dzikiego dino: <span>150</span>
       </h3>
     </StyledRates>
   );

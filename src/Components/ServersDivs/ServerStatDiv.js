@@ -17,18 +17,18 @@ const ServerStatDiv = () => {
     <StyledServers>
       <ServerItem
         id="s1"
-        title="Never Ending Survival Core"
+        title="Never Ending Survival PVE"
         url="steam://rungameid/346110//connect//51.38.145.171:7777"
         status="Online"
         badge="badge nonpvp"
       />
-      <ServerItem
+      {/* <ServerItem
         id="s2"
-        title="Never Ending Survival Sub"
+        title="Never Ending Survival PVP"
         url="https://google.pl/"
-        status="Online"
-        badge="badge nonpvp"
-      />
+        status="Offline"
+        badge="badge"
+      /> */}
     </StyledServers>
   );
 };
