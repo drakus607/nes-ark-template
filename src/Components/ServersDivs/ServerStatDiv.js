@@ -18,7 +18,7 @@ const ServerStatDiv = () => {
       <ServerItem
         id="s1"
         title="Never Ending Survival PVE"
-        url="steam://rungameid/346110//connect//51.38.145.171:7777"
+        url="steam://rungameid/346110//connect//51.38.145.171:27015"
         status="Online"
         badge="badge nonpvp"
       />
