@@ -70,6 +70,11 @@ const NavItems = () => {
                 Zasady
               </Link>
             </li>
+            <li>
+              <a href="https://discord.gg/W5hUtmtEQW" target="_blank">
+                Discord
+              </a>
+            </li>
             {globalContext.user && (
               <li>
                 <RLink to="/donate">Donate</RLink>
