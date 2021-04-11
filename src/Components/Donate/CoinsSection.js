@@ -1,6 +1,6 @@
+
 import React from "react";
 import styled from "styled-components";
-// import VipPackage from "./Packages/VipPackage";
 import PointsPackage from "./Packages/PointsPackage";
 
 const StyledDiv = styled.section`
@@ -17,6 +17,7 @@ const COIN_PKGS = [
       "https://res.cloudinary.com/ddq7mrhkh/image/upload/c_scale,q_40,w_800/v1614767127/nes-ark-template/pngkey.com-money-falling-png-29404_kmuupr.webp",
     element: "p",
     description: "50 monet do wydania w naszym sklepiku.",
+    price: 10.00,
   },
   {
     id: "medium",
@@ -25,6 +26,7 @@ const COIN_PKGS = [
       "https://res.cloudinary.com/ddq7mrhkh/image/upload/c_scale,f_auto,q_35,w_800/v1614767129/nes-ark-template/pngkey.com-money-falling-png-26676_ch2vkw.webp",
     element: "p",
     description: "150 monet do wydania w naszym sklepiku.",
+    price: 25.00,
   },
   {
     id: "huge",
@@ -33,6 +35,7 @@ const COIN_PKGS = [
       "https://res.cloudinary.com/ddq7mrhkh/image/upload/c_scale,f_auto,q_35,w_800/v1614767124/nes-ark-template/pngkey.com-pile-of-gold-png-1598541_exdnph.webp",
     element: "p",
     description: "400 monet do wydania w naszym sklepiku.",
+    price: 40.00,
   },
 ];
 
@@ -45,12 +48,15 @@ const coinList = COIN_PKGS.map((pkg) => {
       imgurl={pkg.imgurl}
       element={pkg.element}
       description={pkg.description}
+      price={pkg.price}
     />
   );
 });
 
 const CoinsSection = () => {
-  return <StyledDiv className="container">{coinList}</StyledDiv>;
-};
+  return (
+    <StyledDiv className="container">{coinList}</StyledDiv>
+
+)};
 
 export default CoinsSection;

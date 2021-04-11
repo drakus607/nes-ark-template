@@ -34,25 +34,25 @@ function App() {
   }, []);
   return (
     <GlobalContext.Provider value={{ user }}>
-      <Header />
-      {width <= 960 && <Backdrop />}
-      {width <= 960 && <MobileMenu />}
-      <Switch>
-        <Route exact path="/">
-          <Hero />
-          <NewsSection />
-          <Servers />
-          <Commands />
-          <RulesSection />
-          <Footer />
-        </Route>
-        <Route exact path="/new-post">
-          {user ? <AddPost /> : <Redirect to="/" />}
-        </Route>
-        <Route exact path="/donate">
-          {user ? <DonateSection /> : <Redirect to="/" />}
-        </Route>
-      </Switch>
+        <Header />
+        {width <= 960 && <Backdrop />}
+        {width <= 960 && <MobileMenu />}
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+            <NewsSection />
+            <Servers />
+            <Commands />
+            <RulesSection />
+            <Footer />
+          </Route>
+          <Route exact path="/new-post">
+            {user ? <AddPost /> : <Redirect to="/" />}
+          </Route>
+          <Route exact path="/donate">
+            {user ? <DonateSection /> : <Redirect to="/" />}
+          </Route>
+        </Switch>
     </GlobalContext.Provider>
   );
 }

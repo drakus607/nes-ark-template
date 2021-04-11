@@ -18,8 +18,8 @@ const DonateSection = () => {
         title="Dotacje"
         subtitle="Poniżej znajdziesz możliwe pakiety dotacji oraz nagród przyznawanych za wsparcie serwera."
       />
-      <VipSection />
-      <CoinsSection />
+        <VipSection />
+        <CoinsSection />
     </StyledDonate>
   );
 };

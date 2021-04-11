@@ -71,7 +71,7 @@ const NavItems = () => {
               </Link>
             </li>
             <li>
-              <a href="https://discord.gg/W5hUtmtEQW" target="_blank">
+              <a href="https://discord.gg/W5hUtmtEQW" target="_blank" rel="noreferrer">
                 Discord
               </a>
             </li>
