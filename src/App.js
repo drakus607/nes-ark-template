@@ -25,6 +25,7 @@ function App() {
   const { width } = useWindowSize();
   AOS.init({
     once: true,
+    startEvent: 'DOMContentLoaded',
   });
   const [user, setUser] = useState();
   useEffect(() => {
