@@ -33,7 +33,7 @@ const NavContainer = styled.header`
       font-size: 0.7rem;
       font-family: "Poppins", sans-serif;
       position: fixed;
-      top: 5.5%;
+      top: 5%;
       right: 0;
     }
     & span {

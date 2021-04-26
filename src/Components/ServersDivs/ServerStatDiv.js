@@ -21,14 +21,16 @@ const ServerStatDiv = () => {
         url="steam://rungameid/346110//connect//51.38.145.171:27015"
         status="Online"
         badge="badge nonpvp"
+        map="Ragnarok"
       />
-      {/* <ServerItem
+      <ServerItem
         id="s2"
-        title="Never Ending Survival PVP"
-        url="https://google.pl/"
-        status="Offline"
-        badge="badge"
-      /> */}
+        title="Never Ending Survival PVE"
+        url="steam://rungameid/346110//connect//51.38.145.171:27025"
+        status="Online"
+        badge="badge nonpvp"
+        map="Extinction"
+      />
     </StyledServers>
   );
 };

@@ -17,6 +17,9 @@ const RatesDiv = (props) => {
         </span>
       </h3>
       <h3>
+        Mapa: <span>{props.map}</span>
+      </h3>
+      <h3>
         Mnożnik XP: <span>2x</span>
       </h3>
       <h3>

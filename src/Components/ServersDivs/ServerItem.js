@@ -76,7 +76,7 @@ const ServerItem = (props) => {
     >
       <h2>{props.title}</h2>
       <h3 className={props.badge}>{props.status}</h3>
-      <RatesDiv players={playersNum ? playersNum.length : 0} max={maxPlayers} />
+      <RatesDiv players={playersNum ? playersNum.length : 0} max={maxPlayers} map={props.map} />
       <ConnectButton btnId="btn_1" text="Połącz" url={props.url} />
     </StyledItem>
   );
