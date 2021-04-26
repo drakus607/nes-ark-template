@@ -30,6 +30,8 @@ const ServerStatDiv = () => {
         status="Online"
         badge="badge nonpvp"
         map="Extinction"
+        players={0}
+        max={100}
       />
     </StyledServers>
   );
